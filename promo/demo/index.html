@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Obsidian Publish Studio Demo</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <main class="stage">
+      <div class="ambient ambient-one"></div>
+      <div class="ambient ambient-two"></div>
+      <div class="brand"><span>OPS</span> Obsidian Publish Studio</div>
+      <div class="timeline"><span id="progress"></span></div>
+
+      <section class="scene active" data-duration="7000">
+        <div class="copy wide">
+          <span class="eyebrow">THE PUBLISHING PROBLEM</span>
+          <h1>文章已经写完，<br><em>发布工作才刚开始。</em></h1>
+          <p>复制、重新排版、上传图片、检查代码块，再为每个平台重做一遍。</p>
+        </div>
+        <div class="chaos">
+          <div>Markdown 原稿</div><div>X</div><div>知乎</div><div>公众号</div><div>图片</div><div>代码块</div>
+        </div>
+      </section>
+
+      <section class="scene" data-duration="7000">
+        <div class="split">
+          <div class="copy">
+            <span class="eyebrow">ONE SOURCE OF TRUTH</span>
+            <h2>继续在 Obsidian 写作。</h2>
+            <p>不迁移创作空间，不上传整个 Vault。原稿、图片和发布状态始终由你掌控。</p>
+          </div>
+          <div class="window editor-window">
+            <div class="window-bar"><i></i><i></i><i></i><span>launch-note.md</span></div>
+            <pre><b># 为什么长内容需要更好的发布工具</b>
+
+短内容可以直接在社交平台完成，
+但完整长文需要反复调整段落、图片和代码。
+
+<mark>## 验证重点</mark>
+- 保持文章结构
+- 处理本地与 OSS 图片
+- 生成平台成品包
+
+![[workflow.png]]</pre>
+          </div>
+        </div>
+      </section>
+
+      <section class="scene" data-duration="8000">
+        <div class="copy centered">
+          <span class="eyebrow">UNDERSTAND BEFORE PUBLISH</span>
+          <h2>先理解文章，再生成平台版本。</h2>
+        </div>
+        <div class="structure-grid">
+          <div><strong>4</strong><span>标题</span></div>
+          <div><strong>12</strong><span>段落</span></div>
+          <div><strong>3</strong><span>列表</span></div>
+          <div><strong>2</strong><span>代码块</span></div>
+          <div><strong>5</strong><span>图片资源</span></div>
+          <div class="warning"><strong>1</strong><span>待处理项</span></div>
+        </div>
+        <div class="flow"><span>Markdown</span><b>→</b><span>结构化文章</span><b>→</b><span>平台成品包</span></div>
+      </section>
+
+      <section class="scene" data-duration="9000">
+        <div class="preview-shell">
+          <aside>
+            <small>PUBLISH CHECK</small>
+            <h3>发布准备情况</h3>
+            <div class="score">92 <span>/ 100</span><p>适合进入平台输出阶段</p></div>
+            <ul><li>✓ 文章标题</li><li>✓ 长内容结构</li><li>✓ 内容留在本地</li><li class="warn">! 1 张本地图片待处理</li></ul>
+          </aside>
+          <article>
+            <small>LOCAL-FIRST ARTICLE PREVIEW</small>
+            <h2>为什么长内容需要更好的发布工具</h2>
+            <p class="meta">12 个段落 · 5 张图片 · 2 个代码块</p>
+            <p>短内容可以直接在社交平台完成，但一篇结构完整的长内容通常需要反复调整段落与图片。</p>
+            <h3>一次编辑，多处使用</h3>
+            <blockquote>保留核心观点，同时适配每个平台的阅读习惯。</blockquote>
+            <div class="code">const source = "Obsidian";<br>const output = publishStudio.compile(source);</div>
+          </article>
+        </div>
+      </section>
+
+      <section class="scene" data-duration="8000">
+        <div class="copy centered">
+          <span class="eyebrow">COMPILE, DON'T COPY</span>
+          <h2>一篇原稿，生成不同平台成品。</h2>
+          <p>不是把同一段文字复制到所有地方，而是转换成每个平台真正适合发布的形态。</p>
+        </div>
+        <div class="outputs">
+          <div><b>Article</b><span>富文本长文</span></div>
+          <div><b>Thread Cards</b><span>长文线程与图片卡片</span></div>
+          <div><b>Rich Text</b><span>知乎与公众号草稿</span></div>
+          <div><b>Publish Log</b><span>记录发布状态与版本</span></div>
+        </div>
+      </section>
+
+      <section class="scene" data-duration="7000">
+        <div class="privacy">
+          <div class="lock">⌂</div>
+          <div class="copy">
+            <span class="eyebrow">LOCAL-FIRST BY DEFAULT</span>
+            <h2>你的内容，不需要先交给另一个创作平台。</h2>
+            <p>Obsidian 是唯一原稿源。Publish Studio 负责检查、转换和生成草稿，最终发布仍由你确认。</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="scene" data-duration="8000">
+        <div class="copy centered final">
+          <span class="eyebrow">EARLY ACCESS</span>
+          <h1>写一次。<em>发布得更好。</em></h1>
+          <p>Obsidian Publish Studio<br>面向长内容创作者的本地发布工作台。</p>
+          <button>加入早期体验</button>
+          <small>当前正在招募 Obsidian 长内容创作者参与验证</small>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

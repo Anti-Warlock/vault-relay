@@ -1,0 +1,7 @@
+node_modules/
+main.js
+release/
+chrome-extension/
+*.zip
+*.log
+.DS_Store

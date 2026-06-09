@@ -1,0 +1,9 @@
+{
+  "id": "obsidian-publish-studio",
+  "name": "Obsidian Publish Studio",
+  "version": "0.6.1",
+  "minAppVersion": "1.5.0",
+  "description": "Inspect and prepare long-form Obsidian notes for publishing.",
+  "author": "Anti-Warlock",
+  "isDesktopOnly": true
+}

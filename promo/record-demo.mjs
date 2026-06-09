@@ -7,8 +7,8 @@ import puppeteer from "puppeteer-core";
 
 const root = path.resolve(import.meta.dirname, "..");
 const frameDir = path.join(root, "promo", ".frames");
-const outputPath = path.join(root, "promo", "obsidian-publish-studio-demo.mp4");
-const posterPath = path.join(root, "promo", "obsidian-publish-studio-poster.png");
+const outputPath = path.join(root, "promo", "vault-relay-demo.mp4");
+const posterPath = path.join(root, "promo", "vault-relay-poster.png");
 const chromePath = "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe";
 const fps = 8;
 const durationSeconds = 54;
@@ -71,4 +71,3 @@ function run(command, args) {
     child.on("exit", (code) => code === 0 ? resolve() : reject(new Error(`ffmpeg exited with ${code}`)));
   });
 }
-

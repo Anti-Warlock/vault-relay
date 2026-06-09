@@ -1,4 +1,4 @@
-# Obsidian Publish Studio 60 秒推广视频
+# VaultRelay 60 秒推广视频
 
 ## 视频目标
 
@@ -6,7 +6,7 @@
 
 核心信息：
 
-> 继续在 Obsidian 写作，让 Publish Studio 把长文转换成可发布的成品。
+> 继续在 Obsidian 写作，让 VaultRelay 把长文转换成可发布的成品。
 
 ## 成片规格
 
@@ -35,7 +35,7 @@
 
 旁白：
 
-> Obsidian Publish Studio 不替换你的创作空间。Obsidian 始终是唯一原稿。
+> VaultRelay 不替换你的创作空间。Obsidian 始终是唯一原稿。
 
 字幕：
 
@@ -95,7 +95,7 @@
 
 旁白：
 
-> Obsidian Publish Studio。写一次，发布得更好。现在招募早期体验用户。
+> VaultRelay。Your vault stays. Your ideas travel. 现在招募早期体验用户。
 
 字幕：
 
@@ -110,4 +110,3 @@
 目标是：理解 Markdown 结构，处理图片、代码块和表格，再生成可以直接发布的平台成品。
 
 目前正在招募早期体验用户。如果你每月会从 Obsidian 发布两篇以上长内容，欢迎参与测试。
-

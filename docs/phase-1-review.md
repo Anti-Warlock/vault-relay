@@ -17,7 +17,7 @@
 2. 重启 Obsidian 并确认插件版本为 `0.4.0`。
 3. 打开一篇真实长篇 Markdown。
 4. 打开命令面板。
-5. 执行 `Obsidian Publish Studio: 检查当前文章结构`。
+5. 执行 `VaultRelay: 检查当前文章结构`。
 
 ## 请重点 Review
 

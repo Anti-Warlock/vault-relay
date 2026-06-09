@@ -60,7 +60,7 @@ export class ThreadCardsModal extends Modal {
     totalCards: number
   ): void {
     const header = container.createEl("header");
-    header.createEl("span", { text: "OBSIDIAN PUBLISH STUDIO" });
+    header.createEl("span", { text: "VAULTRELAY" });
     header.createEl("strong", { text: `${card.index + 1} / ${totalCards}` });
 
     const body = container.createDiv("obsidian-thread-card-body");
@@ -69,7 +69,7 @@ export class ThreadCardsModal extends Modal {
 
     const footer = container.createEl("footer");
     footer.createEl("span", { text: "Written in Obsidian · Compiled locally" });
-    footer.createEl("b", { text: "OPS" });
+    footer.createEl("b", { text: "VR" });
   }
 
   private renderBlock(container: HTMLElement, block: ArticleBlock, document: ArticleDocument): void {
@@ -198,7 +198,7 @@ export class ThreadCardsModal extends Modal {
 
   private async ensureExportFolder(): Promise<string> {
     const parent = this.sourcePath.split("/").slice(0, -1).join("/");
-    const folder = normalizePath(`${parent ? `${parent}/` : ""}publish-studio/${safeName(this.fileName)}`);
+    const folder = normalizePath(`${parent ? `${parent}/` : ""}vault-relay/${safeName(this.fileName)}`);
     const parts = folder.split("/");
     let current = "";
     for (const part of parts) {
@@ -220,4 +220,3 @@ function dataUrlToArrayBuffer(dataUrl: string): ArrayBuffer {
 function safeName(value: string): string {
   return value.replace(/[\\/:*?"<>|]/g, "-").trim() || "untitled";
 }
-

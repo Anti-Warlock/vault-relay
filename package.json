@@ -1,7 +1,7 @@
 {
-  "name": "obsidian-publish-studio",
-  "version": "0.6.1",
-  "description": "Inspect and preview long-form Obsidian notes for publishing.",
+  "name": "vault-relay",
+  "version": "0.7.0",
+  "description": "Turn long-form notes into publish-ready content without moving your vault.",
   "main": "main.js",
   "scripts": {
     "dev": "node esbuild.config.mjs",

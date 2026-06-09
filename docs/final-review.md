@@ -1,10 +1,10 @@
-# Obsidian Publish Studio 0.6.1 集中测试指南
+# VaultRelay 0.7.0 集中测试指南
 
 ## 安装检查
 
 1. 覆盖 `main.js`、`manifest.json`、`styles.css`。
 2. 重启 Obsidian。
-3. 确认插件名称为 `Obsidian Publish Studio`，版本为 `0.6.1`。
+3. 确认插件名称为 `VaultRelay`，版本为 `0.7.0`。
 
 ## 建议测试文章
 
@@ -19,7 +19,7 @@
 执行：
 
 ```text
-Obsidian Publish Studio: 检查当前文章结构
+VaultRelay: 检查当前文章结构
 ```
 
 检查标题、段落、图片和特殊结构是否正确识别，是否存在错误警告。
@@ -29,7 +29,7 @@ Obsidian Publish Studio: 检查当前文章结构
 执行：
 
 ```text
-Obsidian Publish Studio: 预览当前文章成品
+VaultRelay: 预览当前文章成品
 ```
 
 检查：
@@ -44,7 +44,7 @@ Obsidian Publish Studio: 预览当前文章成品
 执行：
 
 ```text
-Obsidian Publish Studio: 生成长文图片卡片
+VaultRelay: 生成长文图片卡片
 ```
 
 检查：
@@ -61,8 +61,8 @@ Obsidian Publish Studio: 生成长文图片卡片
 查看：
 
 ```text
-promo/obsidian-publish-studio-demo.mp4
-promo/obsidian-publish-studio-poster.png
+promo/vault-relay-demo.mp4
+promo/vault-relay-poster.png
 promo/x-launch-post.md
 ```
 

@@ -56,7 +56,7 @@ export class ArticlePreviewModal extends Modal {
     this.addCheck(checks, Boolean(document.title), "文章标题", document.title || "缺少标题");
     this.addCheck(checks, document.stats.warnings === 0, "资源与格式", warningSummary(document));
     this.addCheck(checks, document.blocks.length >= 3, "长内容结构", `${document.blocks.length} 个顶层节点`);
-    this.addCheck(checks, true, "内容留在本地", "未上传到 Publish Studio 服务器");
+    this.addCheck(checks, true, "内容留在本地", "未上传到 VaultRelay 服务器");
 
     if (document.warnings.length) {
       container.createEl("h3", { text: "需要处理" });

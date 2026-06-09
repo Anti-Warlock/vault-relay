@@ -1,4 +1,4 @@
-# Obsidian Publish Studio 0.6.0 交付摘要
+# VaultRelay 0.7.0 交付摘要
 
 ## 当前可集中验证的产品闭环
 
@@ -14,9 +14,9 @@ Obsidian 长文
 ## 插件命令
 
 ```text
-Obsidian Publish Studio: 检查当前文章结构
-Obsidian Publish Studio: 预览当前文章成品
-Obsidian Publish Studio: 生成长文图片卡片
+VaultRelay: 检查当前文章结构
+VaultRelay: 预览当前文章成品
+VaultRelay: 生成长文图片卡片
 ```
 
 ## 安装文件
@@ -30,8 +30,8 @@ styles.css
 ## 推广材料
 
 ```text
-promo/obsidian-publish-studio-demo.mp4
-promo/obsidian-publish-studio-poster.png
+promo/vault-relay-demo.mp4
+promo/vault-relay-poster.png
 promo/video-script.md
 promo/landing-copy.md
 promo/x-launch-post.md

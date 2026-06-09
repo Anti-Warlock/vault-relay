@@ -1,10 +1,10 @@
 # X 推广帖
 
-我在做 **Obsidian Publish Studio**，给不想为了发布内容而迁移 Vault 的 Obsidian 用户。
+我在做 **VaultRelay**，给不想为了发布内容而迁移 Vault 的 Obsidian 用户。
 
 很多发布工具要求你把 Markdown、图片甚至整个创作流程搬到另一个平台。文章写完后，你仍然需要重新排版、处理图片、修复代码块，再为不同平台重复整理。
 
-Obsidian Publish Studio 让 Obsidian 继续作为唯一原稿：
+VaultRelay 让 Obsidian 继续作为唯一原稿：
 
 - 识别标题、列表、代码块、表格和图片
 - 发布前检查格式与资源问题
@@ -20,11 +20,12 @@ Obsidian Publish Studio 让 Obsidian 继续作为唯一原稿：
 
 ## 更短版本
 
-我在做 **Obsidian Publish Studio**。
+我在做 **VaultRelay**。
 
 它面向不想为了发布内容而迁移 Vault 的 Obsidian 用户：识别 Markdown 结构、检查图片和格式问题、预览发布成品，并把长文章生成可直接发布的图片卡片。
 
 Obsidian 始终是唯一原稿，内容默认留在本地。
 
-正在招募早期体验用户。
+Your vault stays. Your ideas travel.
 
+正在招募早期体验用户。

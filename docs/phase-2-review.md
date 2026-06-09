@@ -18,7 +18,7 @@
 4. 执行：
 
 ```text
-Obsidian Publish Studio: 预览当前文章成品
+VaultRelay: 预览当前文章成品
 ```
 
 请检查：
@@ -36,13 +36,13 @@ Obsidian Publish Studio: 预览当前文章成品
 成片：
 
 ```text
-promo/obsidian-publish-studio-demo.mp4
+promo/vault-relay-demo.mp4
 ```
 
 封面：
 
 ```text
-promo/obsidian-publish-studio-poster.png
+promo/vault-relay-poster.png
 ```
 
 自动播放演示页：

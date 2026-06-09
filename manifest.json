@@ -1,9 +1,9 @@
 {
-  "id": "obsidian-publish-studio",
-  "name": "Obsidian Publish Studio",
-  "version": "0.6.1",
+  "id": "vault-relay",
+  "name": "VaultRelay",
+  "version": "0.7.0",
   "minAppVersion": "1.5.0",
-  "description": "Inspect and prepare long-form Obsidian notes for publishing.",
+  "description": "Turn long-form notes into publish-ready content without moving your vault.",
   "author": "Anti-Warlock",
   "isDesktopOnly": true
 }

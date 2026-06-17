@@ -1,7 +1,14 @@
 node_modules/
 main.js
 release/
-chrome-extension/
 *.zip
 *.log
+*.pem
+.env
+.env.*
+.wrangler/
 .DS_Store
+docs/
+examples/*.md
+promo/
+tests/

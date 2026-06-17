@@ -1,12 +1,16 @@
 {
   "name": "vault-relay",
-  "version": "0.7.0",
-  "description": "Turn long-form notes into publish-ready content without moving your vault.",
+  "version": "0.16.0",
+  "description": "Turn Obsidian notes into drafts for X, Zhihu, WeChat, and Xiaohongshu.",
   "main": "main.js",
   "scripts": {
     "dev": "node esbuild.config.mjs",
     "build": "tsc --noEmit --skipLibCheck && node esbuild.config.mjs production",
     "test": "tsx --test tests/*.test.ts",
+    "test:companion": "node tests/companion-smoke.mjs",
+    "test:queue": "node tests/queue-smoke.mjs",
+    "verify": "npm test && npm run build && npm run test:companion && npm run test:queue",
+    "license:generate": "node scripts/generate-license.mjs",
     "record:promo": "node promo/record-demo.mjs"
   },
   "keywords": [

@@ -4,6 +4,7 @@ import {
   countCharacters,
   countXWeightedCharacters,
   extractRemoteImageUrls,
+  mapImageReferencesToPosts,
   mapRemoteImagesToPosts,
   markdownToPost,
   splitIntoPosts
@@ -97,6 +98,22 @@ test("maps remote images to the closest generated post", () => {
   assert.deepEqual(mapRemoteImagesToPosts(markdown, posts), [
     ["https://oss.example/one.png"],
     ["https://oss.example/two.png"]
+  ]);
+});
+
+test("maps local and remote images to generated posts", () => {
+  const markdown = `第一部分。
+
+![[local.png]]
+
+第二部分。
+
+![remote](https://oss.example/remote.png)`;
+  const posts = ["第一部分。", "第二部分。"];
+
+  assert.deepEqual(mapImageReferencesToPosts(markdown, posts), [
+    [{ kind: "local", source: "local.png" }],
+    [{ kind: "remote", source: "https://oss.example/remote.png" }]
   ]);
 });
 

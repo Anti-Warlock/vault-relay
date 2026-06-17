@@ -1,13 +1,19 @@
 const MAX_POST_LENGTH = 280;
 
+export interface ImageReference {
+  kind: "remote" | "local";
+  source: string;
+}
+
 export function markdownToPost(markdown: string): string {
   const text = markdown
     .replace(/\r\n?/g, "\n")
     .replace(/^---\n[\s\S]*?\n---\n?/, "")
+    .replace(/<!--[\s\S]*?-->/g, "")
     .replace(/\\n/g, "\n")
     .replace(/```[^\n]*\n([\s\S]*?)```/g, "$1")
     .replace(/!\[\[([^\]]+)\]\]/g, "")
-    .replace(/!\[([^\]]*)\]\([^)]+\)/g, "$1")
+    .replace(/!\[([^\]]*)\]\([^)]+\)/g, "")
     .replace(/\[\[([^|\]]+)\|([^\]]+)\]\]/g, "$2")
     .replace(/\[\[([^\]]+)\]\]/g, "$1")
     .replace(/\[([^\]]+)\]\((https?:\/\/[^)]+)\)/g, "$1 $2")
@@ -33,27 +39,46 @@ export function extractRemoteImageUrls(markdown: string): string[] {
 }
 
 export function mapRemoteImagesToPosts(markdown: string, posts: string[]): string[][] {
-  const assignments = posts.map(() => [] as string[]);
-  if (!posts.length) return assignments;
+  return mapImageReferencesToPosts(markdown, posts).map((images) =>
+    images.filter((image) => image.kind === "remote").map((image) => image.source)
+  );
+}
 
-  const parts = markdown.replace(/\r\n?/g, "\n").split(/(!\[[^\]]*\]\(https?:\/\/[^)\s]+(?:\s+["'][^"']*["'])?\))/g);
+export function mapImageReferencesToPosts(markdown: string, posts: string[]): ImageReference[][] {
+  if (!posts.length) return [];
+
+  const references: ImageReference[][] = posts.map(() => []);
+  const imagePattern = /(!\[\[[^\]]+\]\]|!\[[^\]]*\]\([^)]+\))/g;
+  const parts = markdown.replace(/\r\n?/g, "\n").split(imagePattern);
   let precedingText = "";
 
   for (const part of parts) {
-    const imageMatch = part.match(/^!\[[^\]]*\]\((https?:\/\/[^)\s]+)/);
-    if (!imageMatch) {
+    const image = parseImageReference(part);
+    if (!image) {
       precedingText += part;
       continue;
     }
 
     const context = markdownToPost(precedingText).slice(-80);
     const index = findBestPostIndex(context, posts);
-    if (assignments[index].length < 4 && !assignments[index].includes(imageMatch[1])) {
-      assignments[index].push(imageMatch[1]);
+    if (!references[index].some((item) => item.source === image.source)) {
+      references[index].push(image);
     }
   }
 
-  return assignments;
+  return references;
+}
+
+function parseImageReference(value: string): ImageReference | null {
+  const embed = value.match(/^!\[\[([^\]|]+)(?:\|[^\]]+)?\]\]$/);
+  if (embed) return { kind: "local", source: embed[1] };
+
+  const markdownImage = value.match(/^!\[[^\]]*\]\(([^)\s]+)(?:\s+["'][^"']*["'])?\)$/);
+  if (!markdownImage) return null;
+  return {
+    kind: /^https?:\/\//.test(markdownImage[1]) ? "remote" : "local",
+    source: markdownImage[1]
+  };
 }
 
 export function splitIntoPosts(

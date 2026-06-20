@@ -1,7 +1,7 @@
 {
   "name": "vault-relay",
   "version": "0.16.0",
-  "description": "Turn Obsidian notes into drafts for X, Zhihu, WeChat, and Xiaohongshu.",
+  "description": "Turn Markdown notes into drafts for X, Zhihu, WeChat, and Xiaohongshu.",
   "main": "main.js",
   "scripts": {
     "dev": "node esbuild.config.mjs",
@@ -11,6 +11,7 @@
     "test:queue": "node tests/queue-smoke.mjs",
     "verify": "npm test && npm run build && npm run test:companion && npm run test:queue",
     "license:generate": "node scripts/generate-license.mjs",
+    "license:from-purchase": "node scripts/generate-pro-code-from-purchase.mjs",
     "record:promo": "node promo/record-demo.mjs"
   },
   "keywords": [
@@ -22,7 +23,6 @@
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^22.15.3",
-    "builtin-modules": "^4.0.0",
     "esbuild": "^0.25.3",
     "ffmpeg-static": "^5.3.0",
     "obsidian": "^1.8.7",

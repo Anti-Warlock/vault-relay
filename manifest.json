@@ -3,7 +3,7 @@
   "name": "VaultRelay",
   "version": "0.16.0",
   "minAppVersion": "1.5.0",
-  "description": "Turn Obsidian notes into drafts for X, Zhihu, WeChat, and Xiaohongshu.",
+  "description": "Turn Markdown notes into drafts for X, Zhihu, WeChat, and Xiaohongshu.",
   "author": "Anti-Warlock",
   "isDesktopOnly": true
 }

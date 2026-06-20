@@ -355,7 +355,7 @@ function inlineText(content: InlineContent[]): string {
 function phrasingPlainText(content: PhrasingContent[]): string {
   return content.map((node) => {
     if ("value" in node && typeof node.value === "string") return node.value;
-    if ("children" in node) return phrasingPlainText(node.children as PhrasingContent[]);
+    if ("children" in node) return phrasingPlainText(node.children);
     if (node.type === "image") return node.alt ?? "";
     return "";
   }).join("");

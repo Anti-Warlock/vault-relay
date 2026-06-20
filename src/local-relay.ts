@@ -59,13 +59,14 @@ export class LocalRelay {
     return new Promise((resolve) => {
       const waiters = this.claimWaiters.get(claimCode) ?? new Set<(claimed: boolean) => void>();
       this.claimWaiters.set(claimCode, waiters);
+      const timers = typeof window === "undefined" ? globalThis : window;
       const finish = (claimed: boolean) => {
-        clearTimeout(timer);
+        timers.clearTimeout(timer);
         waiters.delete(finish);
         if (!waiters.size) this.claimWaiters.delete(claimCode);
         resolve(claimed);
       };
-      const timer = setTimeout(() => finish(false), timeoutMs);
+      const timer = timers.setTimeout(() => finish(false), timeoutMs);
       waiters.add(finish);
     });
   }

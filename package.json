@@ -1,6 +1,6 @@
 {
   "name": "vault-relay",
-  "version": "0.16.0",
+  "version": "0.16.1",
   "description": "Turn Markdown notes into drafts for X, Zhihu, WeChat, and Xiaohongshu.",
   "main": "main.js",
   "scripts": {

@@ -139,9 +139,8 @@ export function createPublicationTask(
 
   if (platform === "xiaohongshu") {
     const titleText = document.title || title;
-    const titleLimit = 20;
     const bodyLimit = 1000;
-    const useArticleMode = Array.from(plainText).length > bodyLimit;
+    const useArticleMode = images.length === 0 || Array.from(plainText).length > bodyLimit;
     if (useArticleMode) {
       return {
         ...base,
@@ -165,15 +164,10 @@ export function createPublicationTask(
     }
     return {
       ...base,
-      title: truncateText(titleText, titleLimit),
+      title: titleText,
       editorUrl: "https://creator.xiaohongshu.com/publish/publish?from=homepage&target=image",
       issues: [
         ...base.issues,
-        ...(Array.from(titleText).length > titleLimit ? [{
-          severity: "warning" as const,
-          code: "xiaohongshu-title-truncated",
-          message: `小红书标题超过 ${titleLimit} 字，已生成精简标题，请发布前检查。`
-        }] : []),
         ...(images.length > 18 ? [{
           severity: "error" as const,
           code: "xiaohongshu-too-many-images",
@@ -517,10 +511,6 @@ function renderInline(content: InlineContent[], document: ArticleDocument): stri
         return "<br>";
     }
   }).join("");
-}
-
-function truncateText(value: string, maxLength: number): string {
-  return Array.from(value).slice(0, maxLength).join("");
 }
 
 function escapeHtml(value: string): string {
